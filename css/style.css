@@ -1,0 +1,260 @@
+.hidden {
+  display: none;
+}
+
+/*
+body의 top에 padding을 300px 준다.
+*/
+body {
+  padding-top: 300px;
+  font-family: "Baloo Tammudu 2", "Noto Sans KR", sans-serif;
+}
+
+.btn-logout .material-icons {
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  margin: auto;
+  transition: 0.4s;
+  text-shadow: 2px 2px 2px black;
+}
+
+.btn-logout:hover .material-icons {
+  color: rgb(255, 166, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+/*
+bgImage id의 설정 변경 
+이 정보를 이용해 배경 이미지로 이미지가 들어가게 된다.
+left, top : 오브젝트의 출력 시작위치 
+position : 오브ㅔ젝트의 위치 지정 속성 
+  static : 기본, 
+  relative : 상대적 배치 (현재 내가 출력되어야할 위치로부터 상대적으로 배치가 진행됨)
+  absolute : 해당 속성으로 지정되면 DOM 트리를 따라 올라가다 position 속성이 static 가 아닌 속성까지 이동해
+             그속성의 위치에서부터 절대좌표로 처리된다. 
+             부조의 position속성중에 static이 없으면 body를 기준으로 작동.
+*/
+#bgImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  z-index: -5;
+  filter: brightness(80%);
+}
+
+/*
+  text-align 을 이용해 form자체를 중앙 배치
+*/
+#login-form {
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+}
+/*
+LoginForm 의 첫번째 input의 속성 지정 
+이름을 입력하는 창
+*/
+#login-form input:first-child {
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  padding: 10px;
+  width: 240px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  transition: all, 0.4s;
+}
+/*
+LoginForm 의 첫번째 input의 hover 속성 
+마우스를 오버하면 백그라운드 컬러가 바뀐다.
+*/
+#login-form input:first-child:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/*placeholder color change*/
+#login-form input:hover::-webkit-input-placeholder {
+  color: rgb(50, 50, 50);
+}
+/*
+LoginForm 의 첫번째 input의 focus 속성 
+마우스로 Input창을 클릭하면 속성이 바뀐다.
+아웃라인 없애고, 백그라운드 컬러 변경등
+*/
+#login-form input:first-child:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+}
+/*
+LoginForm의 2번째 차일드 (Login버튼을 말함)
+Login 버튼의 스타일 지정
+*/
+#login-form input:nth-child(2) {
+  margin-left: 20px;
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgb(80, 80, 80);
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  outline: none;
+  cursor: pointer;
+  transition: all, 0.4s;
+}
+#login-form input:nth-child(2):hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#login-form input:nth-child(2):active {
+  background-color: darkgray;
+  color: white;
+  outline: none;
+}
+/*
+todoForm 위치 중앙으로 이동
+*/
+#todo-form {
+  text-align: center;
+  margin-top: 0px;
+}
+/*
+todoForm Input창 디자인변경 (LoginForm같이 변경하면 된다)
+*/
+#todo-form input {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  width: 540px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  transition: all, 0.4s;
+}
+#todo-form:hover input {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#todo-form input:hover::-webkit-input-placeholder {
+  /*placeholder color change*/
+  color: rgb(50, 50, 50);
+}
+#todo-form input:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#todo-list {
+  text-align: center;
+}
+#todo-list li {
+  list-style: none;
+  color: rgba(250, 250, 250, 0.8);
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-size: 1.4rem;
+  width: 560px;
+  margin: auto;
+  text-shadow: 2px 2px 2px black;
+  display: flex;
+}
+#todo-list li:hover {
+  color: rgb(255, 166, 0);
+}
+
+#todo-list span {
+  width: 500px;
+  text-align: left;
+}
+
+#todo-list button {
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+  color: white;
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 4px;
+  border: none;
+  font-size: 1.2rem;
+}
+#todo-list button:hover {
+  cursor: pointer;
+}
+
+#clock {
+  text-align: center;
+  height: 260px;
+  font-size: 8rem;
+  margin: 10px;
+  color: white;
+  opacity: 0.7;
+  text-shadow: 2px 2px 2px black;
+}
+/*
+로그인 메시지
+*/
+#greeting {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px black;
+}
+/*
+명언
+*/
+#quotes {
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 42px;
+  bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 2px 2px 2px black;
+}
+
+#quotes .swiper-container {
+  width: 100%;
+  height: 40px;
+}
+
+/*
+날씨
+*/
+#weather {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px black;
+}
+#weather:hover {
+  color: rgb(255, 166, 0);
+}
